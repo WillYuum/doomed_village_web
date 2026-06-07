@@ -8,14 +8,47 @@
 </head>
 <body>
   <main class="hero">
-    <section class="card" aria-label="Coming soon">
-      <p class="eyebrow">Doomed Village</p>
-      <h1>Coming Soon</h1>
-      <p class="subtitle">A medieval strategy & survival game where there are no winners, only difficult choices to buy time.</p>
-      <p class="contact">
-        Contact: <a href="mailto:liamshere98@gmail.com">liamshere98@gmail.com</a>
-      </p>
+    <nav class="side-nav" aria-label="Side slide controls">
+      <a class="side-button side-button-left" href="#game-overview" aria-label="Go to game overview">&lt;</a>
+      <a class="side-button side-button-right" href="#mailing-list" aria-label="Go to mailing list">&gt;</a>
+    </nav>
+
+    <section class="hero-shell" aria-label="Doomed Village coming soon">
+      <section id="game-overview" class="card panel" aria-label="Game overview">
+        <p class="eyebrow">Doomed Village</p>
+        <p class="swipe-hint">Swipe left to open the mailing list form.</p>
+        <h1 class="headline">Build hope in a village that cannot be saved.</h1>
+        <p class="subtitle">A medieval strategy & survival game where there are no winners, only difficult choices to buy time.</p>
+        <ul class="feature-list" aria-label="Game highlights">
+          <li>Everything is a problem that needs your attention and decision making.</li>
+          <li>Use your resources to have an advantage in making choices.</li>
+          <li>Take advantage of available resources to make choices easier.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="notify-link" href="#mailing-list">Swipe to mailing list</a>
+          <p class="contact">
+            Contact: <a href="mailto:liamshere98@gmail.com">liamshere98@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <aside id="mailing-list" class="signup-form-wrap panel" aria-label="Mailing list signup">
+        <p class="signup-label">Mailing List</p>
+        <h2 class="signup-title">Get launch updates</h2>
+        <p class="signup-subtitle">Be first to know about demos, release windows, and behind-the-scenes dev logs.</p>
+        <div class="octupus-form">
+          <script async src="https://eocampaign1.com/form/51b77bf0-62c1-11f1-a6fb-19957cb2fa63.js"
+            data-form="51b77bf0-62c1-11f1-a6fb-19957cb2fa63"></script>
+        </div>
+        <p class="signup-footnote">Low frequency emails. No spam.</p>
+        <p class="swipe-hint">Swipe right to return to the game overview.</p>
+      </aside>
     </section>
+
+    <nav class="slide-dots" aria-label="Slide navigation">
+      <a class="dot dot-overview" href="#game-overview" aria-label="Open game overview"></a>
+      <a class="dot dot-form" href="#mailing-list" aria-label="Open mailing list form"></a>
+    </nav>
   </main>
 </body>
 </html>
