@@ -65,6 +65,86 @@ body {
   gap: 1rem;
 }
 
+.site-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 3.5rem;
+
+  padding: 0.25rem 0.5rem;
+}
+
+.site-mark {
+  margin: 0;
+
+  color: var(--sand-soft);
+
+  font-size: 1.05rem;
+
+  letter-spacing: 0.04em;
+}
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.35rem;
+}
+
+.social-links a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 2.35rem;
+  height: 2.35rem;
+
+  color: var(--sand);
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.social-links a:hover {
+  color: var(--moss);
+
+  border-color: var(--panel-edge);
+
+  background-color: rgba(31, 43, 51, 0.45);
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 3px;
+}
+
+.social-links svg {
+  width: 1.15rem;
+  height: 1.15rem;
+
+  fill: currentColor;
+}
+
+.social-links rect,
+.social-links circle:not(.icon-dot) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.social-links .icon-dot {
+  fill: currentColor;
+}
+
 .panel {
   border-radius: 20px;
 
@@ -251,6 +331,10 @@ body {
 /* MOBILE */
 
 @media (max-width: 768px) {
+
+  .site-header {
+    padding-inline: 0.25rem;
+  }
 
   .feature-grid {
     grid-template-columns: 1fr;
