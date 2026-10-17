@@ -1,55 +1,191 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doomed Village - Coming Soon</title>
-  <meta name="description" content="Doomed Village: rule a village caught in a war it cannot fight. The village is doomed to fall, but you get to choose how." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="public/favicon_io/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doomed Village — Cozy Lit Window</title>
+  <meta name="description" content="Doomed Village is a narrative choice matter game.   The village is going to fall. You get to choose how.">
+  <meta property="og:title" content="Doomed Village — Cozy Lit Window">
+  <meta property="og:description" content="The village is going to fall. You get to choose how.">
+  <meta property="og:image" content="public/assets/library_hero.png">
+  <meta name="theme-color" content="#1f2b33">
+  <link rel="preload" as="image" href="public/assets/library_hero.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <main class="hero">
-    <nav class="side-nav" aria-label="Side slide controls">
-      <a class="side-button side-button-left" href="#game-overview" aria-label="Go to game overview">&lt;</a>
-      <a class="side-button side-button-right" href="#mailing-list" aria-label="Go to mailing list">&gt;</a>
+
+  <a class="skip-link" href="#overview">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top" aria-label="Cozy Lit Window — back to top">
+      <img src="public/assets/Main_Logo_Inverted.png" alt="Cozy Lit Window">
+    </a>
+
+    <nav class="header-actions" aria-label="Site">
+    <div class="info-menu">
+      <button type="button" class="info-toggle" id="info-toggle" aria-expanded="false" aria-controls="info-panel">
+        Info
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+
+      <div class="info-panel" id="info-panel" hidden>
+        <p class="info-heading">Socials</p>
+        <a href="https://www.youtube.com/@cozylitwindow" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@cozylitwindow" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/cozylitwindow/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <a class="contact-link" href="mailto:cozylitwindow@gmail.com">Contact</a>
     </nav>
+  </header>
 
-    <section class="hero-shell" aria-label="Doomed Village coming soon">
-      <section id="game-overview" class="card panel" aria-label="Game overview">
-        <p class="eyebrow">Doomed Village</p>
-        <p class="swipe-hint">Swipe left to open the mailing list form.</p>
-        <h1 class="headline">Rule a village caught in a war it cannot fight.</h1>
-        <p class="subtitle">The village is doomed to fall — you only get to choose how. A medieval management game about hard choices, not high scores.</p>
-        <ul class="feature-list" aria-label="Game highlights">
-          <li>Trade the problems you have for problems you believe the village can survive.</li>
-          <li>Every choice solves one crisis and quietly seeds the next.</li>
-          <li>Watch the village change as the war progresses beyond your control.</li>
-        </ul>
-        <div class="cta-row">
-          <a class="notify-link" href="#mailing-list">Swipe to mailing list</a>
-          <p class="contact">
-            Contact: <a href="mailto:liamshere98@gmail.com">liamshere98@gmail.com</a>
-          </p>
-        </div>
-      </section>
+  <main id="top">
 
-      <aside id="mailing-list" class="signup-form-wrap panel" aria-label="Mailing list signup">
-        <p class="signup-label">Mailing List</p>
-        <h2 class="signup-title">Get launch updates</h2>
-        <p class="signup-subtitle">Be first to know about demos, release windows, and behind-the-scenes dev logs.</p>
-        <div class="octupus-form">
-          <script async src="https://eocampaign1.com/form/51b77bf0-62c1-11f1-a6fb-19957cb2fa63.js"
-            data-form="51b77bf0-62c1-11f1-a6fb-19957cb2fa63"></script>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Doomed Village key art"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-title">Doomed Village</h1>
+        <p class="tagline">The village is going to fall. You get to choose how.</p>
+
+        <div class="signup" id="mailing-list">
+          <p class="signup-title">Join the mailing list</p>
+          <div class="octupus-form">
+            <script async src="https://eocampaign1.com/form/51b77bf0-62c1-11f1-a6fb-19957cb2fa63.js"
+              data-form="51b77bf0-62c1-11f1-a6fb-19957cb2fa63">
+              </script>
+          </div>
+          <p class="signup-footnote">Demos, development news and release dates. Low frequency. No spam.</p>
         </div>
-        <p class="signup-footnote">Low frequency emails. No spam.</p>
-        <p class="swipe-hint">Swipe right to return to the game overview.</p>
-      </aside>
+      </div>
+
+      <a class="scroll-indicator" href="#overview" aria-label="Scroll to game overview"><span></span></a>
     </section>
 
-    <nav class="slide-dots" aria-label="Slide navigation">
-      <a class="dot dot-overview" href="#game-overview" aria-label="Open game overview"></a>
-      <a class="dot dot-form" href="#mailing-list" aria-label="Open mailing list form"></a>
-    </nav>
+    <!-- OVERVIEW -->
+    <section class="overview" id="overview" aria-labelledby="overview-title">
+      <div class="overview-inner">
+        <p class="eyebrow">A narrative choices matter game</p>
+        <h2 id="overview-title">A village to rule. A war to endure.</h2>
+        <p>
+            Rule a village caught in the shadow of war.
+            You cannot fight or stop it. Every decision
+            comes at a cost, and solving one problem
+            may give rise to another. Choose which
+            problems to face, which to endure, and
+            shape your village's fate as the war
+            draws closer.
+        </p>
+        <p>How will you rule your village?</p>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="gallery" aria-label="Screenshots">
+      <ul class="shots">
+        <li><button type="button" class="shot" aria-label="View screenshot 1 full size"><img src="public/assets/Screenshot_1.png" alt="Doomed Village screenshot 1" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+        <li><button type="button" class="shot" aria-label="View screenshot 2 full size"><img src="public/assets/Screenshot_2.png" alt="Doomed Village screenshot 2" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+        <li><button type="button" class="shot" aria-label="View screenshot 3 full size"><img src="public/assets/Screenshot_3.png" alt="Doomed Village screenshot 3" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+        <li><button type="button" class="shot" aria-label="View screenshot 4 full size"><img src="public/assets/Screenshot_4.png" alt="Doomed Village screenshot 4" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+        <li><button type="button" class="shot" aria-label="View screenshot 5 full size"><img src="public/assets/Screenshot_5.png" alt="Doomed Village screenshot 5" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+        <li><button type="button" class="shot" aria-label="View screenshot 6 full size"><img src="public/assets/Screenshot_6.png" alt="Doomed Village screenshot 6" width="3840" height="2160" loading="lazy" decoding="async"></button></li>
+      </ul>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-logos" role="group" aria-label="Company and game logos">
+      <img class="footer-company-logo" src="public/assets/Main_Logo_Inverted.png" alt="Cozy Lit Window" width="1600" height="900" loading="lazy">
+      <img class="footer-game-logo" src="public/assets/Game_Icon_Square_Transparent.png" alt="Doomed Village" width="1024" height="1024" loading="lazy">
+    </div>
+    <nav aria-label="Social media and contact">
+      <a href="https://www.youtube.com/@cozylitwindow" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@cozylitwindow" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/cozylitwindow/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:cozylitwindow@gmail.com">Contact</a>
+    </nav>
+    <p class="copyright">&copy; <span id="year">2026</span> Cozy Lit Window. All rights reserved.</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+    <button type="button" class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+    <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Previous screenshot">&#8249;</button>
+    <img id="lb-img" alt="">
+    <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Next screenshot">&#8250;</button>
+  </dialog>
+
+  <script>
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Info dropdown
+      var toggle = document.getElementById('info-toggle');
+      var panel = document.getElementById('info-panel');
+      function setMenu(open) {
+        toggle.setAttribute('aria-expanded', open);
+        panel.hidden = !open;
+      }
+      toggle.addEventListener('click', function () { setMenu(panel.hidden); });
+      document.addEventListener('click', function (e) {
+        if (!panel.hidden && !e.target.closest('.info-menu')) setMenu(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.hidden) { setMenu(false); toggle.focus(); }
+      });
+
+      // Header background once scrolled
+      var header = document.getElementById('site-header');
+      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 40); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Lightbox
+      var dialog = document.getElementById('lightbox');
+      var img = document.getElementById('lb-img');
+      var shots = Array.prototype.slice.call(document.querySelectorAll('.shot'));
+      var current = 0;
+      function show(i) {
+        current = (i + shots.length) % shots.length;
+        var src = shots[current].querySelector('img');
+        img.src = src.currentSrc || src.src;
+        img.alt = src.alt;
+      }
+      shots.forEach(function (b, i) {
+        b.addEventListener('click', function () { show(i); dialog.showModal(); });
+      });
+      document.getElementById('lb-close').addEventListener('click', function () { dialog.close(); });
+      document.getElementById('lb-prev').addEventListener('click', function () { show(current - 1); });
+      document.getElementById('lb-next').addEventListener('click', function () { show(current + 1); });
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+      dialog.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+
+      // Reveal on scroll
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.overview-inner, .shots li').forEach(function (el) {
+          el.classList.add('reveal');
+          io.observe(el);
+        });
+      }
+    })();
+  </script>
+
 </body>
+
 </html>
