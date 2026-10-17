@@ -13,7 +13,7 @@
   --slate: #495a58;
   --deep: #1f2b33;
   --edge: rgba(212, 190, 173, 0.22);
-  --header-h: 4rem;
+  --header-h: 5.5rem;
 }
 
 * { box-sizing: border-box; }
@@ -90,14 +90,50 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--sand-soft);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
-.brand img { width: 100px; height: 100px; }
+.brand { position: relative; z-index: 1; }
+.brand img {
+  height: calc(var(--header-h) - 1rem);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(212, 190, 173, 0.25));
+  animation: logo-in 900ms ease-out both;
+  transition: transform 250ms ease, filter 250ms ease;
+}
+.brand:hover img, .brand:focus-visible img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 14px rgba(137, 171, 102, 0.55));
+}
+.brand:focus-visible { outline: 2px solid var(--moss); outline-offset: 4px; border-radius: 6px; }
 
-.header-actions { display: flex; align-items: center; gap: 0.75rem; }
+/* soft fade behind the logo, clipped to the header's own box */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 18rem 100% at 0% 50%, rgba(137, 171, 102, 0.18), transparent 70%),
+    linear-gradient(90deg, rgba(31, 43, 51, 0.85) 0%, rgba(31, 43, 51, 0.5) 25%, rgba(31, 43, 51, 0) 55%);
+  transition: opacity 250ms ease;
+}
+.site-header.scrolled::before { opacity: 0.6; }
+.site-header > * { position: relative; z-index: 1; }
+
+@keyframes logo-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand img { animation: none; transition: none; }
+}
+
+.header-actions { display: flex; align-items: center; gap: 1rem; font-size: 1.15rem; }
 .contact-link {
   display: inline-flex;
   align-items: center;
-  min-height: 2.75rem;
-  padding: 0 0.5rem;
+  min-height: 3rem;
+  padding: 0 0.75rem;
   letter-spacing: 0.06em;
   text-decoration: none;
   color: var(--sand-soft);
@@ -111,8 +147,8 @@ img { display: block; max-width: 100%; height: auto; }
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  min-height: 2.75rem;
-  padding: 0 0.5rem;
+  min-height: 3rem;
+  padding: 0 0.75rem;
   font: inherit;
   letter-spacing: 0.06em;
   color: var(--sand-soft);
@@ -122,8 +158,8 @@ img { display: block; max-width: 100%; height: auto; }
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 .info-toggle svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.15rem;
+  height: 1.15rem;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
