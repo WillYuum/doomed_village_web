@@ -127,6 +127,12 @@ img { display: block; max-width: 100%; height: auto; }
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 .contact-link:hover { color: var(--moss); }
+.contact-link:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; color: var(--moss); }
+.contact-link .ext-arrow { margin-left: 0.25em; font-size: 0.7em; opacity: 0.7; }
+@media (max-width: 480px) {
+  .header-actions { gap: 0.25rem; font-size: 1rem; }
+  .contact-link, .info-toggle { padding: 0 0.5rem; white-space: nowrap; }
+}
 
 .info-menu { position: relative; }
 
