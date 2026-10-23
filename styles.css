@@ -398,6 +398,20 @@ img { display: block; max-width: 100%; height: auto; }
 .site-footer nav a:hover { color: var(--moss); }
 .copyright { margin: 1.5rem 0 0; font-size: 0.85rem; opacity: 0.7; }
 
+/* PRIVACY POLICY PAGE */
+
+.policy {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: calc(var(--header-h) + 2rem) 1.5rem 4rem;
+  min-height: 70vh;
+  overflow-wrap: anywhere;
+}
+.policy h1 { font-size: clamp(2rem, 6vw, 3rem); color: var(--sand-soft); margin: 0 0 0.5rem; }
+.policy h2 { font-size: clamp(1.3rem, 4vw, 1.7rem); color: var(--sand-soft); margin: 2.5rem 0 0.5rem; }
+.policy a { color: var(--moss); }
+.policy li { margin-bottom: 0.3rem; }
+
 /* LIGHTBOX */
 
 .lightbox {
