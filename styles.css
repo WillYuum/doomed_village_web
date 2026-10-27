@@ -242,26 +242,84 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .tagline {
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1.5rem;
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   color: var(--sand-soft);
 }
 
+.steam-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 22rem);
+  min-height: 3.5rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-shadow: none;
+  color: var(--deep);
+  background: var(--moss);
+  border: 1px solid #a5c785;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 22px rgba(137, 171, 102, 0.35);
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+.steam-cta:hover { background: #9dc07a; transform: translateY(-2px); }
+.steam-cta:focus-visible { outline: 2px solid var(--sand-soft); outline-offset: 4px; }
+.steam-cta .ext-arrow { white-space: pre; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .signup {
-  padding: 1rem 1.25rem;
-  background: rgba(31, 43, 51, 0.72);
-  border: 1px solid var(--edge);
-  backdrop-filter: blur(6px);
+  max-width: 30rem;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--edge);
   text-shadow: none;
 }
 .signup-title {
-  margin: 0 0 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.85rem;
-  color: var(--moss);
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: var(--sand-soft);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
-.octupus-form { min-height: 4.5rem; }
+.octupus-form { min-height: 3rem; }
+.octupus-form form { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.octupus-form input[type="email"] {
+  flex: 1 1 12rem;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  font: inherit;
+  color: var(--sand-soft);
+  background: rgba(31, 43, 51, 0.72);
+  border: 1px solid var(--edge);
+}
+.octupus-form button,
+.octupus-form input[type="submit"] {
+  flex: 0 0 auto;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  font: inherit;
+  cursor: pointer;
+  color: var(--sand-soft);
+  background: transparent;
+  border: 1px solid var(--sand);
+}
+.octupus-form button:hover,
+.octupus-form input[type="submit"]:hover { color: var(--moss); border-color: var(--moss); }
+@media (max-width: 480px) {
+  .octupus-form form { flex-direction: column; }
+  .octupus-form input[type="email"], .octupus-form button, .octupus-form input[type="submit"] { width: 100%; flex: none; }
+}
 .signup-footnote {
   margin: 0.5rem 0 0;
   font-size: 0.85rem;
